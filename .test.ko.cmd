@@ -1,0 +1,1 @@
+cmd_/home/ezslabor/Paketsort_test/test.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ezslabor/Paketsort_test/test.ko /home/ezslabor/Paketsort_test/test.o /home/ezslabor/Paketsort_test/test.mod.o

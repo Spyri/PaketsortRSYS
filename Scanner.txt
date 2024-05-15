@@ -1,0 +1,31 @@
+#define scanner 0x80    //128
+void trigger_scanner(){
+ int i;
+ deactivate(scanner);
+ rt_sleep(SCANNER_RUHEZEIT); //muss sein, sonst wird nicht reaktiviert
+ charcounter=0;
+ 
+ for(i=0;i<LENGTH_EAN;i++){  //alten EAN-Code löschen
+  eancode[i]=' ';  
+ }
+ activate(scanner);
+}
+
+void fun(int t){
+ while (1) {
+  outb(0xff, CARD);  //signal=1
+  rt_sleep(nano2count(our1p5ms));
+  outb(0x0, CARD);  //signal=0
+  rt_task_wait_period();
+ }
+}
+
+Der Barcode-Scanner hat seine eigene interne Logik, d.h. um das Erfassen von Barcodes müssen wir uns nicht kümmern.
+ Wir müssen den Scanner lediglich triggern, wenn ein Paket LS0 unterbricht, also eine 0-1-Flanke an ihn schicken,
+  um ihn zu aktivieren. Die RS232-Schnittstelle unseres Computers ist dann in definierten Zeitabständen
+   (bei 9600Baud pollen wir mit T=600µs, Erklärung hierzu siehe (*) S.3) daraufhin zu prüfen, ob ein neues Byte anliegt.
+    So setzt sich innerhalb von ca. 7ms ein kompletter Barcode mit 13 Bytes, also 13 Ziffern zusammen,
+     die unsere Paketadresse darstellen soll. Hier kommt nun ein grundlegender Aspekt auf, 
+     wie wir die Paketsortierung umsetzen. Wir haben die Idee, daß die Adressen, sobald sie vorliegen,
+      in einem FIFO FIFO1 abgelegt werden. Es soll insgesamt drei FIFOs geben, 
+wobei jedes für ein Auswurfstationsregister steht
