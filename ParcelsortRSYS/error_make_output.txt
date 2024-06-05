@@ -1,0 +1,501 @@
+ezslabor@c13-09:~/ParcelsortRSYS$ make
+make -C /lib/modules/4.4.71-rtai/build SUBDIRS=/home/ezslabor/ParcelsortRSYS EXTRA_FLAGS=-I/usr/realtime/include -I/usr/src/linux/include -I/usr/include modules
+make[1]: Entering directory '/usr/src/linux-4.4.71-rtai'
+  CC [M]  /home/ezslabor/ParcelsortRSYS/test.o
+In file included from /usr/include/features.h:367:0,
+                 from /usr/include/errno.h:28,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:5:
+/usr/include/sys/cdefs.h:236:0: warning: "__attribute_const__" redefined
+ # define __attribute_const__ __attribute__ ((__const__))
+ ^
+In file included from include/linux/compiler.h:56:0,
+                 from include/linux/init.h:4,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:1:
+include/linux/compiler-gcc.h:121:0: note: this is the location of the previous definition
+ #define __attribute_const__ __attribute__((__const__))
+ ^
+In file included from /usr/include/features.h:367:0,
+                 from /usr/include/errno.h:28,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:5:
+/usr/include/sys/cdefs.h:307:0: warning: "__always_inline" redefined
+ # define __always_inline __inline __attribute__ ((__always_inline__))
+ ^
+In file included from include/linux/compiler.h:56:0,
+                 from include/linux/init.h:4,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:1:
+include/linux/compiler-gcc.h:83:0: note: this is the location of the previous definition
+ #define __always_inline inline __attribute__((always_inline))
+ ^
+In file included from /usr/include/fcntl.h:76:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/time.h:120:8: error: redefinition of ‘struct timespec’
+ struct timespec
+        ^
+In file included from ./arch/x86/include/asm/preempt.h:6:0,
+                 from include/linux/preempt.h:60,
+                 from include/linux/spinlock.h:50,
+                 from include/linux/seqlock.h:35,
+                 from include/linux/time.h:5,
+                 from include/linux/stat.h:18,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/linux/thread_info.h:13:8: note: originally defined here
+ struct timespec;
+        ^
+In file included from /usr/include/fcntl.h:77:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/stat.h:46:8: error: redefinition of ‘struct stat’
+ struct stat
+        ^
+In file included from include/linux/stat.h:5:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+./arch/x86/include/uapi/asm/stat.h:82:8: note: originally defined here
+ struct stat {
+        ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:79:0: warning: "S_IFMT" redefined
+ # define S_IFMT  __S_IFMT
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:7:0: note: this is the location of the previous definition
+ #define S_IFMT  00170000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:80:0: warning: "S_IFDIR" redefined
+ # define S_IFDIR __S_IFDIR
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:12:0: note: this is the location of the previous definition
+ #define S_IFDIR  0040000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:81:0: warning: "S_IFCHR" redefined
+ # define S_IFCHR __S_IFCHR
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:13:0: note: this is the location of the previous definition
+ #define S_IFCHR  0020000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:82:0: warning: "S_IFBLK" redefined
+ # define S_IFBLK __S_IFBLK
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:11:0: note: this is the location of the previous definition
+ #define S_IFBLK  0060000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:83:0: warning: "S_IFREG" redefined
+ # define S_IFREG __S_IFREG
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:10:0: note: this is the location of the previous definition
+ #define S_IFREG  0100000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:85:0: warning: "S_IFIFO" redefined
+ #  define S_IFIFO __S_IFIFO
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:14:0: note: this is the location of the previous definition
+ #define S_IFIFO  0010000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:88:0: warning: "S_IFLNK" redefined
+ #  define S_IFLNK __S_IFLNK
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:9:0: note: this is the location of the previous definition
+ #define S_IFLNK  0120000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:91:0: warning: "S_IFSOCK" redefined
+ #  define S_IFSOCK __S_IFSOCK
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:8:0: note: this is the location of the previous definition
+ #define S_IFSOCK 0140000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:96:0: warning: "S_ISUID" redefined
+ # define S_ISUID __S_ISUID       /* Set user ID on execution.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:15:0: note: this is the location of the previous definition
+ #define S_ISUID  0004000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:97:0: warning: "S_ISGID" redefined
+ # define S_ISGID __S_ISGID       /* Set group ID on execution.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:16:0: note: this is the location of the previous definition
+ #define S_ISGID  0002000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:101:0: warning: "S_ISVTX" redefined
+ #  define S_ISVTX __S_ISVTX
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:17:0: note: this is the location of the previous definition
+ #define S_ISVTX  0001000
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:104:0: warning: "S_IRUSR" redefined
+ # define S_IRUSR __S_IREAD       /* Read by owner.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:28:0: note: this is the location of the previous definition
+ #define S_IRUSR 00400
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:105:0: warning: "S_IWUSR" redefined
+ # define S_IWUSR __S_IWRITE      /* Write by owner.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:29:0: note: this is the location of the previous definition
+ #define S_IWUSR 00200
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:106:0: warning: "S_IXUSR" redefined
+ # define S_IXUSR __S_IEXEC       /* Execute by owner.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:30:0: note: this is the location of the previous definition
+ #define S_IXUSR 00100
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:108:0: warning: "S_IRWXU" redefined
+ # define S_IRWXU (__S_IREAD|__S_IWRITE|__S_IEXEC)
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:27:0: note: this is the location of the previous definition
+ #define S_IRWXU 00700
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:110:0: warning: "S_IRGRP" redefined
+ # define S_IRGRP (S_IRUSR >> 3)  /* Read by group.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:33:0: note: this is the location of the previous definition
+ #define S_IRGRP 00040
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:111:0: warning: "S_IWGRP" redefined
+ # define S_IWGRP (S_IWUSR >> 3)  /* Write by group.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:34:0: note: this is the location of the previous definition
+ #define S_IWGRP 00020
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:112:0: warning: "S_IXGRP" redefined
+ # define S_IXGRP (S_IXUSR >> 3)  /* Execute by group.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:35:0: note: this is the location of the previous definition
+ #define S_IXGRP 00010
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:114:0: warning: "S_IRWXG" redefined
+ # define S_IRWXG (S_IRWXU >> 3)
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:32:0: note: this is the location of the previous definition
+ #define S_IRWXG 00070
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:116:0: warning: "S_IROTH" redefined
+ # define S_IROTH (S_IRGRP >> 3)  /* Read by others.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:38:0: note: this is the location of the previous definition
+ #define S_IROTH 00004
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:117:0: warning: "S_IWOTH" redefined
+ # define S_IWOTH (S_IWGRP >> 3)  /* Write by others.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:39:0: note: this is the location of the previous definition
+ #define S_IWOTH 00002
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:118:0: warning: "S_IXOTH" redefined
+ # define S_IXOTH (S_IXGRP >> 3)  /* Execute by others.  */
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:40:0: note: this is the location of the previous definition
+ #define S_IXOTH 00001
+ ^
+In file included from /home/ezslabor/ParcelsortRSYS/test.c:6:0:
+/usr/include/fcntl.h:120:0: warning: "S_IRWXO" redefined
+ # define S_IRWXO (S_IRWXG >> 3)
+ ^
+In file included from include/linux/stat.h:6:0,
+                 from include/linux/module.h:10,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:2:
+include/uapi/linux/stat.h:37:0: note: this is the location of the previous definition
+ #define S_IRWXO 00007
+ ^
+In file included from ./arch/x86/include/uapi/asm/fcntl.h:1:0,
+                 from include/uapi/linux/fcntl.h:4,
+                 from include/linux/fcntl.h:4,
+                 from include/linux/fs.h:1052,
+                 from include/linux/compat.h:15,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./include/uapi/asm-generic/fcntl.h:18:0: warning: "O_ACCMODE" redefined
+ #define O_ACCMODE 00000003
+ ^
+In file included from /usr/include/bits/fcntl.h:61:0,
+                 from /usr/include/fcntl.h:35,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl-linux.h:42:0: note: this is the location of the previous definition
+ #define O_ACCMODE    0003
+ ^
+In file included from ./arch/x86/include/uapi/asm/fcntl.h:1:0,
+                 from include/uapi/linux/fcntl.h:4,
+                 from include/linux/fcntl.h:4,
+                 from include/linux/fs.h:1052,
+                 from include/linux/compat.h:15,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./include/uapi/asm-generic/fcntl.h:19:0: warning: "O_RDONLY" redefined
+ #define O_RDONLY 00000000
+ ^
+In file included from /usr/include/bits/fcntl.h:61:0,
+                 from /usr/include/fcntl.h:35,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl-linux.h:43:0: note: this is the location of the previous definition
+ #define O_RDONLY      00
+ ^
+In file included from ./arch/x86/include/uapi/asm/fcntl.h:1:0,
+                 from include/uapi/linux/fcntl.h:4,
+                 from include/linux/fcntl.h:4,
+                 from include/linux/fs.h:1052,
+                 from include/linux/compat.h:15,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./include/uapi/asm-generic/fcntl.h:20:0: warning: "O_WRONLY" redefined
+ #define O_WRONLY 00000001
+ ^
+In file included from /usr/include/bits/fcntl.h:61:0,
+                 from /usr/include/fcntl.h:35,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl-linux.h:44:0: note: this is the location of the previous definition
+ #define O_WRONLY      01
+ ^
+In file included from ./arch/x86/include/uapi/asm/fcntl.h:1:0,
+                 from include/uapi/linux/fcntl.h:4,
+                 from include/linux/fcntl.h:4,
+                 from include/linux/fs.h:1052,
+                 from include/linux/compat.h:15,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./include/uapi/asm-generic/fcntl.h:21:0: warning: "O_RDWR" redefined
+ #define O_RDWR  00000002
+ ^
+In file included from /usr/include/bits/fcntl.h:61:0,
+                 from /usr/include/fcntl.h:35,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl-linux.h:45:0: note: this is the location of the previous definition
+ #define O_RDWR       02
+ ^
+In file included from ./arch/x86/include/uapi/asm/fcntl.h:1:0,
+                 from include/uapi/linux/fcntl.h:4,
+                 from include/linux/fcntl.h:4,
+                 from include/linux/fs.h:1052,
+                 from include/linux/compat.h:15,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./include/uapi/asm-generic/fcntl.h:195:8: error: redefinition of ‘struct flock’
+ struct flock {
+        ^
+In file included from /usr/include/fcntl.h:35:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl.h:35:8: note: originally defined here
+ struct flock
+        ^
+In file included from include/linux/fcntl.h:4:0,
+                 from include/linux/fs.h:1052,
+                 from include/linux/compat.h:15,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+include/uapi/linux/fcntl.h:16:0: warning: "F_DUPFD_CLOEXEC" redefined
+ #define F_DUPFD_CLOEXEC (F_LINUX_SPECIFIC_BASE + 6)
+ ^
+In file included from /usr/include/bits/fcntl.h:61:0,
+                 from /usr/include/fcntl.h:35,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl-linux.h:207:0: note: this is the location of the previous definition
+ # define F_DUPFD_CLOEXEC 1030 /* Duplicate file descriptor with
+ ^
+In file included from include/linux/compat.h:15:0,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+include/linux/fs.h: In function ‘generic_write_sync’:
+include/linux/fs.h:2465:28: error: ‘__O_SYNC’ undeclared (first use in this function)
+           (file->f_flags & __O_SYNC) ? 0 : 1);
+                            ^
+include/linux/fs.h:2465:28: note: each undeclared identifier is reported only once for each function it appears in
+In file included from /usr/include/fcntl.h:77:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+./arch/x86/include/asm/compat.h: At top level:
+/usr/include/bits/stat.h:94:26: error: expected ‘:’, ‘,’, ‘;’, ‘}’ or ‘__attribute__’ before ‘.’ token
+ # define st_atime st_atim.tv_sec /* Backward compatibility.  */
+                          ^
+./arch/x86/include/asm/compat.h:69:7: note: in expansion of macro ‘st_atime’
+  u32  st_atime;
+       ^
+In file included from include/linux/compat.h:19:0,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./arch/x86/include/asm/compat.h:87:0: warning: "F_GETLK64" redefined
+ #define F_GETLK64 12 /*  using 'struct flock64' */
+ ^
+In file included from /usr/include/fcntl.h:35:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl.h:29:0: note: this is the location of the previous definition
+ # define F_GETLK64 5 /* Get record locking info.  */
+ ^
+In file included from include/linux/compat.h:19:0,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./arch/x86/include/asm/compat.h:88:0: warning: "F_SETLK64" redefined
+ #define F_SETLK64 13
+ ^
+In file included from /usr/include/fcntl.h:35:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl.h:30:0: note: this is the location of the previous definition
+ # define F_SETLK64 6 /* Set record locking info (non-blocking).  */
+ ^
+In file included from include/linux/compat.h:19:0,
+                 from ./arch/x86/include/asm/fpu/internal.h:13,
+                 from /usr/realtime/include/asm/rtai_fpu.h:216,
+                 from /usr/realtime/include/asm/rtai_hal.h:61,
+                 from /usr/realtime/include/asm/rtai.h:23,
+                 from /usr/realtime/include/rtai.h:27,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:12:
+./arch/x86/include/asm/compat.h:89:0: warning: "F_SETLKW64" redefined
+ #define F_SETLKW64 14
+ ^
+In file included from /usr/include/fcntl.h:35:0,
+                 from /home/ezslabor/ParcelsortRSYS/test.c:6:
+/usr/include/bits/fcntl.h:31:0: note: this is the location of the previous definition
+ # define F_SETLKW64 7 /* Set record locking info (blocking). */
+ ^
+/home/ezslabor/ParcelsortRSYS/test.c: In function ‘sensor_ejection’:
+/home/ezslabor/ParcelsortRSYS/test.c:134:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     uint8_t rbyte = ~get_digital_input();
+     ^
+/home/ezslabor/ParcelsortRSYS/test.c: In function ‘barcode_scanner’:
+/home/ezslabor/ParcelsortRSYS/test.c:188:16: warning: too many arguments for format [-Wformat-extra-args]
+         printf("ean-code: ", charsRead);
+                ^
+/home/ezslabor/ParcelsortRSYS/test.c:189:9: warning: statement with no effect [-Wunused-value]
+         for (i; i < charsRead - 1; i++) {
+         ^
+/home/ezslabor/ParcelsortRSYS/test.c:200:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         int pos = 0;
+         ^
+/home/ezslabor/ParcelsortRSYS/test.c:205:11: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+           write(fd_fifo, "1", 1);
+           ^
+/home/ezslabor/ParcelsortRSYS/test.c:207:11: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+           write(fd_fifo, "2", 1);
+           ^
+/home/ezslabor/ParcelsortRSYS/test.c:209:11: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+           write(fd_fifo, "3", 1);
+           ^
+/home/ezslabor/ParcelsortRSYS/test.c:211:11: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+           write(fd_fifo, "4", 1);
+           ^
+scripts/Makefile.build:264: recipe for target '/home/ezslabor/ParcelsortRSYS/test.o' failed
+make[2]: *** [/home/ezslabor/ParcelsortRSYS/test.o] Error 1
+Makefile:1402: recipe for target '_module_/home/ezslabor/ParcelsortRSYS' failed
+make[1]: *** [_module_/home/ezslabor/ParcelsortRSYS] Error 2
+make[1]: Leaving directory '/usr/src/linux-4.4.71-rtai'
+Makefile:14: recipe for target 'default' failed
+make: *** [default] Error 2

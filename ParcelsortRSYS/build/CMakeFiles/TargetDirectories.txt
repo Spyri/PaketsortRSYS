@@ -1,0 +1,4 @@
+/home/ezslabor/ParcelsortRSYS/build/CMakeFiles/edit_cache.dir
+/home/ezslabor/ParcelsortRSYS/build/CMakeFiles/clean-rtai_kernel_module.dir
+/home/ezslabor/ParcelsortRSYS/build/CMakeFiles/rebuild_cache.dir
+/home/ezslabor/ParcelsortRSYS/build/CMakeFiles/rtai_kernel_module.dir

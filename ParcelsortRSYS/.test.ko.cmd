@@ -1,0 +1,1 @@
+cmd_/home/ezslabor/ParcelsortRSYS/test.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/ezslabor/ParcelsortRSYS/test.ko /home/ezslabor/ParcelsortRSYS/test.o /home/ezslabor/ParcelsortRSYS/test.mod.o
